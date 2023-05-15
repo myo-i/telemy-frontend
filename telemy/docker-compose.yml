@@ -1,0 +1,13 @@
+version: '3'
+services:
+  react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react
+    tty: true
+    volumes:
+      - ./src:/app/react
+    # command: sh -c "cd /app/react && yarn install && yarn start"
+    ports:
+      - 3000:3000
